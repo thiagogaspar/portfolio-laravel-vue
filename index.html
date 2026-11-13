@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Escola da Floresta — Portfólio Laravel e Vue.js</title>
+<meta name="description" content="Plataforma de matrículas, inscrições, pagamentos e hinários em Laravel 11, Inertia e Vue 3. Capturas com dados fictícios.">
+<style>
+:root{--bg:#f6f8f7;--card:#fff;--ink:#14231c;--mut:#5a6b63;--acc:#0b7a58;--acc2:#0a5c43;--line:#e1e8e4}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1714;--card:#15211c;--ink:#e8f0ec;--mut:#9bb0a6;--acc:#3ccf9a;--acc2:#7fe3bd;--line:#23322b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:1040px;margin:0 auto;padding:0 16px}
+header{padding:64px 0 40px;background:linear-gradient(135deg,#06281c,#0b7a58);color:#fff}
+header h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.15}
+header p{margin:0;max-width:680px;opacity:.92;font-size:18px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tags span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:4px 12px;border-radius:99px;font-size:14px}
+section{padding:40px 0}
+h2{font-size:26px;margin:0 0 16px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.card h3{margin:0 0 6px;font-size:17px;color:var(--acc2)}
+.card p,.card li{color:var(--mut);margin:0;font-size:15px}
+.num{font-size:32px;font-weight:700;color:var(--acc)}
+figure{margin:0 0 32px}
+figure img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line);box-shadow:0 8px 30px rgba(0,0,0,.12);display:block}
+figcaption{margin-top:10px;color:var(--mut);font-size:15px}
+figcaption b{color:var(--ink)}
+.two{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+ul{padding-left:20px;margin:8px 0 0}
+li{margin:4px 0}
+.note{font-size:14px;color:var(--mut);border-top:1px solid var(--line);padding:24px 0 48px}
+</style>
+</head>
+<body>
+<header><div class="w">
+<h1>Escola da Floresta</h1>
+<p>Plataforma web de matrículas, inscrições em encontros, pagamentos e biblioteca de hinários. Projeto real em produção, em equipe de duas pessoas. O código é fechado, por isso esta página reúne telas e a arquitetura.</p>
+<div class="tags"><span>Laravel 11</span><span>PHP 8.3</span><span>Inertia</span><span>Vue 3</span><span>Tailwind</span><span>MariaDB</span><span>Redis</span><span>CI/CD</span></div>
+</div></header>
+
+<main class="w">
+<section>
+<h2>Minha contribuição</h2>
+<div class="grid">
+<div class="card"><div class="num">121</div><p>commits meus entre 2025 e 2026, em 21 pull requests</p></div>
+<div class="card"><div class="num">82</div><p>releases automáticas com semantic-release</p></div>
+<div class="card"><div class="num">2</div><p>pessoas na equipe, trabalhando com pull requests e integração contínua</p></div>
+<div class="card"><h3>Pagamentos</h3><p>Integração com o gateway Asaas (cobrança, webhooks), em base já existente: contribuí na evolução, não construí do zero.</p></div>
+</div>
+</section>
+
+<section>
+<h2>Recursos que mais gosto de mostrar</h2>
+
+<figure>
+<img src="img/player.jpg" alt="Player de hinários com capa, lista de faixas e controles" loading="lazy">
+<figcaption><b>Player de hinários.</b> Toca a faixa seguinte sozinho, com lista de faixas, modo aleatório, repetição e volume. Permite guardar os áudios na página para ouvir sem internet enquanto ela estiver aberta, e salvar os áudios em MP3. Layout ajustado para notebook e celular.</figcaption>
+</figure>
+
+<figure>
+<img src="img/hinarios-aluno.jpg" alt="Painel do aluno, aba de hinários com capas" loading="lazy">
+<figcaption><b>Painel do aluno.</b> Abas de encontros, jornada, hinários, recursos espirituais, loja e matrícula. As playlists dos trabalhos são divididas por hinário.</figcaption>
+</figure>
+
+<figure>
+<img src="img/admin-visao-geral.jpg" alt="Painel administrativo com indicadores" loading="lazy">
+<figcaption><b>Painel administrativo.</b> Visão geral de assinantes (confirmados, pendentes e atrasados), aniversariantes e bolsas, além de gestão de hinários, trabalhos, cupons e relatórios.</figcaption>
+</figure>
+
+<figure>
+<img src="img/admin-inscricoes.jpg" alt="Lista de inscrições com exportação e relatórios" loading="lazy">
+<figcaption><b>Inscrições e relatórios.</b> Lista filtrável, exportação para Excel e relatórios de fechamento com adicionais, contato e valores pagos.</figcaption>
+</figure>
+</section>
+
+<section>
+<h2>O que construí e evoluí</h2>
+<div class="two">
+<div class="card"><h3>Inscrições em trabalhos</h3><ul>
+<li>Inscrição avulsa pública com pagamento, sem exigir cadastro</li>
+<li>Adicionais por perfil (hospedagem e refeições), fluxo de convidados e monitores</li>
+<li>Cupons de desconto, inclusive cupom que desconta tudo</li>
+</ul></div>
+<div class="card"><h3>Anamnese e documentos</h3><ul>
+<li>Formulário com validade de 6 meses e revisão extraordinária</li>
+<li>Geração de PDF para o administrador</li>
+</ul></div>
+<div class="card"><h3>Relatórios</h3><ul>
+<li>Fechamento financeiro e relatório operacional por evento</li>
+<li>Exportação para Excel</li>
+</ul></div>
+<div class="card"><h3>Qualidade e entrega</h3><ul>
+<li>Suíte PHPUnit e testes de componentes Vue</li>
+<li>Pipeline de CI/CD e versionamento semântico automatizado</li>
+<li>Comando de staging que cria um evento de demonstração com inscrições fictícias</li>
+</ul></div>
+</div>
+</section>
+
+<section>
+<h2>Arquitetura</h2>
+<div class="card">
+<ul>
+<li><b>Backend:</b> Laravel 11 (PHP 8.3), controllers por domínio, com Redis na stack.</li>
+<li><b>Frontend:</b> Inertia com Vue 3 e Tailwind: páginas públicas, painel do aluno e painel administrativo em um único código.</li>
+<li><b>Dados:</b> MariaDB 10.11 e Redis.</li>
+<li><b>Pagamentos:</b> gateway Asaas com confirmação por webhooks.</li>
+<li><b>Ambiente:</b> DDEV para desenvolvimento local; releases e CI/CD automatizados.</li>
+</ul>
+</div>
+</section>
+
+<p class="note">Todas as telas foram geradas a partir de um banco de demonstração com dados fictícios (nomes, e-mails e conteúdos de exemplo). O código-fonte é do cliente e não é público.</p>
+</main>
+</body>
+</html>
